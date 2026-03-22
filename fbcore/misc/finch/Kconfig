@@ -1,0 +1,35 @@
+menu "FinchBerry OS Identity"
+
+config FBCORE
+    bool "FinchBerry Core Identity Support"
+    default y
+    help
+      Provides hardware identity and boot mode via sysfs.
+
+config FINCH_VERSION
+    string "Finch Platform Version"
+    default "1.0.0"
+
+choice
+    prompt "FinchBerry Release Branch"
+    default FINCH_RELEASE_STABLE
+
+config FINCH_RELEASE_STABLE
+    bool "Stable"
+config FINCH_RELEASE_BETA
+    bool "Beta"
+config FINCH_RELEASE_ROLLING
+    bool "Rolling"
+endchoice
+
+config FINCH_RELEASE
+    string
+    default "stable" if FINCH_RELEASE_STABLE
+    default "beta" if FINCH_RELEASE_BETA
+    default "rolling" if FINCH_RELEASE_ROLLING
+
+config FINCH_OFFICIAL_BUILD
+    bool "Official FinchBerry Build"
+    default n
+
+endmenu
