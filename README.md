@@ -1,5 +1,9 @@
 # Finch Kernel Components
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FinchBerryOS/.github/refs/heads/main/profile/assets/GNU-Kernel-Modules_github.png" alt="FinchBerryOS Logo" width="400">
+</p>
+
 This repository contains low-level FinchBerryOS kernel-side components that provide core system identity and brokered parent-process inspection.
 
 Currently included:
